@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+  --black: #00035f;
+  --red: #f25b43;
+  --light-yellow: #f7db72;
+  --yellow: #faa528;
+  --cerise: #c13291;
+  --purple: #793dc3;
+  --blue: #67a1ce;
+  font-size: 18px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 1em 1rem;
+}
+
+p {
+  margin: 0;
+  padding: 1.5rem 1rem;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  color: var(--black);
+}
+
+.container > * {
+  padding: 1em 2em;
+}
+
+.container {
+  /* Define CSS Grid template here */
+  display: grid;
+
+  width: 90%;
+  margin: 3rem auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "header header header header header header "
+    "main-content main-content main-content sidebar sidebar"
+    "adspace-1 adspace-1 adspace-1 adspace-1"
+    "footer  footer  footer  footer footer footer ";
+}
+
+.header {
+  background-color: var(--purple);
+  grid-column: 1 / span 6;
+}
+.main-content {
+  background-color: var(--yellow);
+  grid-column: 2 / span 1;
+}
+.sidebar {
+  background-color: var(--red);
+  grid-column: 3 / span 1;
+}
+.adspace-1 {
+  background-color: var(--light-yellow);
+  grid-column: 2 / span 1;
+}
+.adspace-2 {
+  background-color: var(--cerise);
+  grid-column: 3 / span 1;
+}
+.footer {
+  background-color: var(--blue);
+  grid-column: 1 / spapn 6;
+}
+/*
+.main-content {
+  background-color: var(--yellow);
+  grid-area: main-content;
+}
+.sidebar {
+  background-color: var(--red);
+  grid-area: sidebar;
+}
+.adspace-1 {
+  background-color: var(--light-yellow);
+  grid-area: adspace-1;
+}
+.adspace-2 {
+  background-color: var(--cerise);
+  grid-area: adspace-2;
+}
+.footer {
+  background-color: var(--blue);
+  grid-area: footer;
+}
+*/
